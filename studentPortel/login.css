@@ -6,16 +6,31 @@
     box-shadow: 0 4px 16px rgba(0,0,0,0.10);
     padding: 32px 24px;
     text-align: center;
+    animation: loginAni 1s ease-in-out;
 }
+
+@keyframes loginAni { 
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 .login-container h2 {
     color: #23408e;
     margin-bottom: 24px;
 }
+
 .login-tabs {
     display: flex;
     justify-content: center;
     margin-bottom: 24px;
 }
+
 .login-tab {
     flex: 1;
     padding: 10px 0;
@@ -27,16 +42,20 @@
     font-weight: bold;
     transition: background 0.2s;
 }
+
 .login-tab.active {
     background: #667eea;
     color: #fff;
 }
+
 .login-form {
     display: none;
 }
+
 .login-form.active {
     display: block;
 }
+
 .login-form input[type="text"],
 .login-form input[type="password"] {
     width: 90%;
@@ -46,6 +65,7 @@
     border-radius: 6px;
     font-size: 1rem;
 }
+
 .login-form label {
     display: block;
     text-align: left;
@@ -53,6 +73,7 @@
     color: #23408e;
     font-weight: 500;
 }
+
 .login-form .button {
     width: 300px;
     margin-top: 10px;
@@ -69,19 +90,17 @@
     border-radius: 5px;
     font-weight: bold;
     border: 3px solid #23408e;
-    transition: background 0.2s, box-shadow 0.2s;
+    transition: background 0.2s, box-shadow 0.2s, transform 0.3s ease-in-out, width 0.3s ease-in-out;
 }
 
 .login-form .button:hover {
     background: radial-gradient(circle, #667eea, #a1c4fd);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border: 2px solid #23408e;
-    transform: scale(1.05);
-    transform: translateY(-6px);
+    transform: scale(1.05) translateY(-6px);
     border-radius: 10px;
     text-decoration: underline;
     width: 320px;
-    transition: all 0.3s ease-in-out;
 }
 
 .login-error {
